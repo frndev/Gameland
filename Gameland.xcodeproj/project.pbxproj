@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F8447FB1E8139A400BABC0C /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8447F91E8139A400BABC0C /* GamesTableViewController.swift */; };
+		3F8447FC1E8139A400BABC0C /* GamesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F8447FA1E8139A400BABC0C /* GamesTableViewController.xib */; };
+		3F8447FF1E813ADB00BABC0C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8447FD1E813ADB00BABC0C /* HomeViewController.swift */; };
+		3F8448001E813ADB00BABC0C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F8447FE1E813ADB00BABC0C /* HomeViewController.xib */; };
+		3F8448051E8140B200BABC0C /* hackersweek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F8448041E8140B200BABC0C /* hackersweek.jpg */; };
 		3F9714E51E643237004DE2BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9714E41E643237004DE2BE /* AppDelegate.swift */; };
-		3F9714E71E643237004DE2BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9714E61E643237004DE2BE /* ViewController.swift */; };
-		3F9714EA1E643237004DE2BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9714E81E643237004DE2BE /* Main.storyboard */; };
 		3F9714EC1E643237004DE2BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9714EB1E643237004DE2BE /* Assets.xcassets */; };
 		3F9714EF1E643237004DE2BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9714ED1E643237004DE2BE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F8447F91E8139A400BABC0C /* GamesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesTableViewController.swift; sourceTree = "<group>"; };
+		3F8447FA1E8139A400BABC0C /* GamesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GamesTableViewController.xib; sourceTree = "<group>"; };
+		3F8447FD1E813ADB00BABC0C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3F8447FE1E813ADB00BABC0C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		3F8448041E8140B200BABC0C /* hackersweek.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hackersweek.jpg; sourceTree = "<group>"; };
 		3F9714E11E643237004DE2BE /* Gameland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gameland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9714E41E643237004DE2BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F9714E61E643237004DE2BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3F9714E91E643237004DE2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F9714EB1E643237004DE2BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F9714EE1E643237004DE2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F9714F01E643237004DE2BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +41,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F8447F81E81393E00BABC0C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F8447F91E8139A400BABC0C /* GamesTableViewController.swift */,
+				3F8447FA1E8139A400BABC0C /* GamesTableViewController.xib */,
+				3F8447FD1E813ADB00BABC0C /* HomeViewController.swift */,
+				3F8447FE1E813ADB00BABC0C /* HomeViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3F8448031E81404600BABC0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F8448041E8140B200BABC0C /* hackersweek.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		3F9714D81E643237004DE2BE = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +79,9 @@
 		3F9714E31E643237004DE2BE /* Gameland */ = {
 			isa = PBXGroup;
 			children = (
+				3F8448031E81404600BABC0C /* Resources */,
+				3F8447F81E81393E00BABC0C /* Controllers */,
 				3F9714E41E643237004DE2BE /* AppDelegate.swift */,
-				3F9714E61E643237004DE2BE /* ViewController.swift */,
-				3F9714E81E643237004DE2BE /* Main.storyboard */,
 				3F9714EB1E643237004DE2BE /* Assets.xcassets */,
 				3F9714ED1E643237004DE2BE /* LaunchScreen.storyboard */,
 				3F9714F01E643237004DE2BE /* Info.plist */,
@@ -125,8 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F9714EF1E643237004DE2BE /* LaunchScreen.storyboard in Resources */,
+				3F8448051E8140B200BABC0C /* hackersweek.jpg in Resources */,
 				3F9714EC1E643237004DE2BE /* Assets.xcassets in Resources */,
-				3F9714EA1E643237004DE2BE /* Main.storyboard in Resources */,
+				3F8447FC1E8139A400BABC0C /* GamesTableViewController.xib in Resources */,
+				3F8448001E813ADB00BABC0C /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,22 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F9714E71E643237004DE2BE /* ViewController.swift in Sources */,
 				3F9714E51E643237004DE2BE /* AppDelegate.swift in Sources */,
+				3F8447FB1E8139A400BABC0C /* GamesTableViewController.swift in Sources */,
+				3F8447FF1E813ADB00BABC0C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3F9714E81E643237004DE2BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F9714E91E643237004DE2BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F9714ED1E643237004DE2BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -302,6 +322,7 @@
 				3F9714F51E643237004DE2BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
