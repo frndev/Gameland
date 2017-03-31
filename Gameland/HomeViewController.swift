@@ -27,7 +27,9 @@ class HomeViewController: UIViewController {
 
     func userDidTapOnImageView(_ sender: UITapGestureRecognizer) {
         
-        let navController = UINavigationController(rootViewController: GamesTableViewController())
+        let gamesTVC = GamesTableViewController()
+        
+        let navController = UINavigationController(rootViewController: gamesTVC)
         
         self.present(navController, animated: true, completion: nil)
         
@@ -43,5 +45,10 @@ class HomeViewController: UIViewController {
         
     }
     
-
+  
+    
+    
+    
 }
+
+
