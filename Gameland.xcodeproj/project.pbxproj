@@ -29,6 +29,10 @@
 		3F9714E51E643237004DE2BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9714E41E643237004DE2BE /* AppDelegate.swift */; };
 		3F9714EC1E643237004DE2BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9714EB1E643237004DE2BE /* Assets.xcassets */; };
 		3F9714EF1E643237004DE2BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9714ED1E643237004DE2BE /* LaunchScreen.storyboard */; };
+		A150B0191E8FA12C00EC049B /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150B0171E8FA12C00EC049B /* LoadingTableViewCell.swift */; };
+		A150B01A1E8FA12C00EC049B /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A150B0181E8FA12C00EC049B /* LoadingTableViewCell.xib */; };
+		A150B01D1E8FA9F000EC049B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150B01B1E8FA9F000EC049B /* AboutViewController.swift */; };
+		A150B01E1E8FA9F000EC049B /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A150B01C1E8FA9F000EC049B /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		3F9714EB1E643237004DE2BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F9714EE1E643237004DE2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F9714F01E643237004DE2BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A150B0171E8FA12C00EC049B /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		A150B0181E8FA12C00EC049B /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
+		A150B01B1E8FA9F000EC049B /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		A150B01C1E8FA9F000EC049B /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,8 @@
 				3F85ECCF1E8D9C5F004C985D /* GameDetailViewController.xib */,
 				3F85ECD41E8E4C0C004C985D /* WebsiteViewController.swift */,
 				3F85ECD51E8E4C0C004C985D /* WebsiteViewController.xib */,
+				A150B01B1E8FA9F000EC049B /* AboutViewController.swift */,
+				A150B01C1E8FA9F000EC049B /* AboutViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -109,6 +119,8 @@
 			children = (
 				3F85ECBF1E8D5D01004C985D /* VideoGameTableViewCell.swift */,
 				3F85ECC01E8D5D01004C985D /* VideoGameTableViewCell.xib */,
+				A150B0171E8FA12C00EC049B /* LoadingTableViewCell.swift */,
+				A150B0181E8FA12C00EC049B /* LoadingTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -198,7 +210,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = frndev;
 				TargetAttributes = {
 					3F9714E01E643237004DE2BE = {
@@ -231,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A150B01A1E8FA12C00EC049B /* LoadingTableViewCell.xib in Resources */,
 				3F9714EF1E643237004DE2BE /* LaunchScreen.storyboard in Resources */,
 				3F85ECD11E8D9C5F004C985D /* GameDetailViewController.xib in Resources */,
 				3F85ECD71E8E4C0C004C985D /* WebsiteViewController.xib in Resources */,
@@ -240,6 +253,7 @@
 				3F9714EC1E643237004DE2BE /* Assets.xcassets in Resources */,
 				3F8447FC1E8139A400BABC0C /* GamesTableViewController.xib in Resources */,
 				3F8448001E813ADB00BABC0C /* HomeViewController.xib in Resources */,
+				A150B01E1E8FA9F000EC049B /* AboutViewController.xib in Resources */,
 				3F85ECC41E8D6231004C985D /* thumbnail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,12 +268,14 @@
 				3F85ECBB1E8D56FE004C985D /* Platform.swift in Sources */,
 				3F85ECC11E8D5D01004C985D /* VideoGameTableViewCell.swift in Sources */,
 				3F85ECCD1E8D9BE2004C985D /* VideoGameTableViewController+UITableViewDelegate.swift in Sources */,
+				A150B0191E8FA12C00EC049B /* LoadingTableViewCell.swift in Sources */,
 				3F9714E51E643237004DE2BE /* AppDelegate.swift in Sources */,
 				3F85ECD61E8E4C0C004C985D /* WebsiteViewController.swift in Sources */,
 				3F8447FB1E8139A400BABC0C /* GamesTableViewController.swift in Sources */,
 				3F85ECBD1E8D5770004C985D /* GameImage.swift in Sources */,
 				3F85ECD01E8D9C5F004C985D /* GameDetailViewController.swift in Sources */,
 				3F85ECCA1E8D8829004C985D /* Parser.swift in Sources */,
+				A150B01D1E8FA9F000EC049B /* AboutViewController.swift in Sources */,
 				3F8447FF1E813ADB00BABC0C /* HomeViewController.swift in Sources */,
 				3F85ECC81E8D7554004C985D /* API.swift in Sources */,
 				3F85ECB91E8D53D1004C985D /* VideoGame.swift in Sources */,
@@ -298,6 +314,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -348,6 +365,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

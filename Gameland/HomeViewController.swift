@@ -31,7 +31,12 @@ class HomeViewController: UIViewController {
         
         let navController = UINavigationController(rootViewController: gamesTVC)
         
-        self.present(navController, animated: true, completion: nil)
+        let aboutVC = AboutViewController()
+        aboutVC.title = "About"
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers([navController,aboutVC], animated: true)
+        
+        self.present(tabBarController, animated: true, completion: nil)
         
     }
     

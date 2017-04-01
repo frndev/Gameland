@@ -13,15 +13,16 @@ class GamesTableViewController: UITableViewController {
     var videogames: [VideoGame] = []
     let searchController = UISearchController(searchResultsController: nil)
     var task : URLSessionTask?
-    
+    var searchText: String = ""
         
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Videojuegos"
-        let nib = UINib(nibName: "VideoGameTableViewCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "gameCell")
-        
+        let videoGameNib = UINib(nibName: "VideoGameTableViewCell", bundle: nil)
+        let searchNib = UINib(nibName: "LoadingTableViewCell", bundle: nil)
+        self.tableView.register(videoGameNib, forCellReuseIdentifier: "gameCell")
+        self.tableView.register(searchNib, forCellReuseIdentifier: "searchCell")
         
         self.searchController.searchResultsUpdater = self
         self.searchController.searchBar.delegate = self
@@ -46,11 +47,33 @@ class GamesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return videogames.count
+        if self.videogames.count == 0 {
+            return 1
+        }
+        
+        return self.videogames.count
+        
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if self.videogames.count == 0 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell") as! LoadingTableViewCell
+            cell.searchLabel.text = "Buscando \"\(self.searchText)\""
+            cell.activityIndicator.startAnimating()
+            
+            return cell
+        }
+      
+         return configureVideoGameCell(at:indexPath)
+        
+        
+    }
+    
+    func configureVideoGameCell(at indexPath: IndexPath) -> VideoGameTableViewCell {
+        
         // No carga en memoria las 1000 celdas
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell") as! VideoGameTableViewCell
         
@@ -76,19 +99,19 @@ class GamesTableViewController: UITableViewController {
                 }
                 
             }
-
+            
         }else {
             cell.gameIconImageView.image = UIImage(named: "thumbnail")
         }
-        
         return cell
+        
     }
 
     func searchVideogamesBy(name text: String) {
         
         self.task = API.searchVideoGamesBy(name: text, completionHandler: { (data, response, error) in
-            if error != nil {
-                print(error?.localizedDescription)
+            if let err = error {
+                print(err.localizedDescription)
                 return
             }
             
@@ -105,46 +128,27 @@ class GamesTableViewController: UITableViewController {
     
 }
 
-
 extension GamesTableViewController: UISearchResultsUpdating {
     
     
     public func updateSearchResults(for searchController: UISearchController) {
-        
-        // Comprobar la cantidad de caracteres introducidos
-        
-        let text = searchController.searchBar.text!
-        
-        if !text.isEmpty{
-            self.task?.cancel()
-            // Acceder a la API
-            DispatchQueue.global(qos:.background).async {
-                self.searchVideogamesBy(name:text)
+        self.videogames = []
+        self.tableView.reloadData()
+        searchText = searchController.searchBar.text!
+        self.task?.cancel()
+        // Acceder a la API
+        DispatchQueue.global(qos:.background).async {
+            self.searchVideogamesBy(name:self.searchText)
 
-            }
-            
-           
-
-            
         }
-        
     }
-
-    
 }
 
 extension GamesTableViewController: UISearchBarDelegate {
-
-
-    func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {
-        self.searchController.searchBar.text = searchBar.text
-    }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
        searchBar.resignFirstResponder()
     }
-    
-    
     
 }
 
