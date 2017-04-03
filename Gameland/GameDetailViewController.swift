@@ -12,6 +12,7 @@ class GameDetailViewController: UIViewController {
     
     let game : VideoGame
     
+    @IBOutlet weak var releaseLabel: UILabel!
     @IBOutlet weak var gameImageView: UIImageView!
     @IBOutlet weak var gameDeckTextView: UITextView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -30,7 +31,14 @@ class GameDetailViewController: UIViewController {
         self.title = game.name
         self.gameDeckTextView.text = game.deck == nil ? "No description" : game.deck
         self.activityIndicator.isHidden = true
-        
+        if let dateString = game.originalReleaseDate {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let date = dateFormatter.date(from: dateString)
+            
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            self.releaseLabel.text = dateFormatter.string(from: date!)
+        }
         if game.gameImage != nil {
             self.activityIndicator.isHidden = false
             self.activityIndicator.startAnimating()
